@@ -61,10 +61,10 @@
     "notes": []
   },
   "notice": {
-    "status": "생성됨",
+    "status": "발송완료",
     "iso_week": "2026-W29",
     "generated_at": "2026-07-14T16:29:38",
-    "confirmed_at": null,
+    "confirmed_at": "2026-07-14T16:59:42",
     "unconfirmed_reminder_count": 0
   },
   "rule_notice_shown": true
