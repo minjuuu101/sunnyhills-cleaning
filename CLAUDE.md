@@ -17,7 +17,7 @@
 
 ## 실행 트리거
 
-매주 월요일 07:00(KST), 클라우드 루틴(claude.ai routines)이 자동으로 실행되어
+매주 월요일 07:00(호주 시드니 시간, Australia/Sydney), 클라우드 루틴(claude.ai routines)이 자동으로 실행되어
 아래 워크플로우를 돌리고 결과를 운영자에게 메시지로 먼저 보여준다. 이 저장소가
 GitHub(`github.com/minjuuu101/sunnyhills-cleaning`)에 있고 클라우드 루틴이 이걸
 체크아웃해서 실행하는 구조다. 운영자는 로컬(이 세션)에서도 언제든 같은 명령을
