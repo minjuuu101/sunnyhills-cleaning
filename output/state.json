@@ -1,0 +1,71 @@
+{
+  "residents": [
+    "소현",
+    "은영",
+    "제이",
+    "승미"
+  ],
+  "zones": [
+    "주방",
+    "화장실",
+    "공용공간",
+    "분리수거"
+  ],
+  "zone_details": {
+    "화장실": "변기 · 세면대 · 바닥(하수구 머리카락) · 거울 얼룩",
+    "주방": "싱크대(음식물) · 건조대(식기류 정리) · 인덕션+환풍기",
+    "공용공간": "거실 · 세탁실 · 복도(현관) · 주방 바닥",
+    "분리수거": "재활용 · 일반쓰레기 배출 · 쓰레기통 닦기 · 쓰레기통 비닐(라이너) 교체"
+  },
+  "rotation_index": 1,
+  "last_run_iso_week": "2026-W29",
+  "vacancy": null,
+  "carryover": null,
+  "penalty_counters": {
+    "소현": 1,
+    "은영": 1,
+    "제이": 1,
+    "승미": 1
+  },
+  "deposit": {
+    "ledger": {
+      "소현": 0,
+      "은영": 0,
+      "제이": 0,
+      "승미": 0
+    },
+    "shared_pool": 0,
+    "threshold": 100,
+    "pending_events": []
+  },
+  "deadline": {
+    "hour": 0,
+    "minute": 0,
+    "grace_minutes": 10
+  },
+  "current_week": {
+    "iso_week": "2026-W29",
+    "week_range": "7/13 ~ 7/19",
+    "assignment": {
+      "주방": "소현",
+      "화장실": "은영",
+      "공용공간": "제이",
+      "분리수거": "승미"
+    },
+    "status": {
+      "소현": "확인대기",
+      "은영": "확인대기",
+      "제이": "확인대기",
+      "승미": "확인대기"
+    },
+    "notes": []
+  },
+  "notice": {
+    "status": "생성됨",
+    "iso_week": "2026-W29",
+    "generated_at": "2026-07-14T16:29:38",
+    "confirmed_at": null,
+    "unconfirmed_reminder_count": 0
+  },
+  "rule_notice_shown": true
+}
