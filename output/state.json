@@ -17,15 +17,15 @@
     "공용공간": "거실 · 세탁실 · 복도(현관) · 주방 바닥",
     "분리수거": "재활용 · 일반쓰레기 배출 · 쓰레기통 닦기 · 쓰레기통 비닐(라이너) 교체"
   },
-  "rotation_index": 1,
-  "last_run_iso_week": "2026-W29",
+  "rotation_index": 2,
+  "last_run_iso_week": "2026-W30",
   "vacancy": null,
   "carryover": null,
   "penalty_counters": {
-    "소현": 1,
-    "은영": 1,
+    "소현": 0,
+    "은영": 0,
     "제이": 0,
-    "승미": 1
+    "승미": 0
   },
   "deposit": {
     "ledger": {
@@ -44,27 +44,27 @@
     "grace_minutes": 10
   },
   "current_week": {
-    "iso_week": "2026-W29",
-    "week_range": "7/13 ~ 7/19",
+    "iso_week": "2026-W30",
+    "week_range": "7/20 ~ 7/26",
     "assignment": {
-      "주방": "소현",
-      "화장실": "은영",
-      "공용공간": "제이",
-      "분리수거": "승미"
+      "주방": "은영",
+      "화장실": "제이",
+      "공용공간": "승미",
+      "분리수거": "소현"
     },
     "status": {
-      "소현": "확인대기",
       "은영": "확인대기",
-      "제이": "완료",
-      "승미": "확인대기"
+      "제이": "확인대기",
+      "승미": "확인대기",
+      "소현": "확인대기"
     },
     "notes": []
   },
   "notice": {
-    "status": "발송완료",
-    "iso_week": "2026-W29",
-    "generated_at": "2026-07-14T16:29:38",
-    "confirmed_at": "2026-07-14T16:59:42",
+    "status": "생성됨",
+    "iso_week": "2026-W30",
+    "generated_at": "2026-07-21T08:54:57",
+    "confirmed_at": null,
     "unconfirmed_reminder_count": 0
   },
   "rule_notice_shown": true
