@@ -35,11 +35,15 @@ def save_json(path: Path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def close_week(state_path: Path, history_path: Path):
+def close_week(state_path: Path, history_path: Path, today: date):
     """지난주(state['current_week'])에 아직 '확인대기'인 사람을 '미제출'로 전환하고
     연속 미제출 카운터를 갱신한 뒤 이력에 확정 기록한다.
     (자정+10분 유예는 마감시각 자체에 이미 반영되어 있다고 가정 — 이 커맨드는
     다음 주 실행 시점, 즉 유예시간이 이미 지난 뒤에 호출된다.)
+
+    안전장치: current_week가 아직 '이번 주'(오늘과 같은 ISO 주차)이면 절대
+    마감 처리하지 않는다 — 주중에 실수로(또는 자동화 세션이 판단을 잘못해서)
+    호출되어도 아직 청소 안 한 사람들이 부당하게 '미제출' 처리되는 사고를 막는다.
     """
     state = load_json(state_path)
     history = load_json(history_path) if history_path.exists() else {}
@@ -50,6 +54,14 @@ def close_week(state_path: Path, history_path: Path):
         return
     if cw.get("closed"):
         print(f"{cw['iso_week']}는 이미 마감 처리되었습니다.")
+        return
+
+    today_iso_week = f"{today.isocalendar()[0]}-W{today.isocalendar()[1]:02d}"
+    if cw["iso_week"] == today_iso_week:
+        print(
+            f"{cw['iso_week']}는 아직 진행 중인 이번 주입니다 — 마감 처리를 "
+            f"거부합니다 (다음 주가 시작된 뒤에만 지난주를 마감할 수 있습니다)."
+        )
         return
 
     deposit = state.setdefault("deposit", {
@@ -206,7 +218,7 @@ def main():
     run_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else date.today()
 
     if args.command == "close-week":
-        close_week(args.state, args.history)
+        close_week(args.state, args.history, run_date)
     elif args.command == "complete":
         complete(args.state, args.history, args.name)
     elif args.command == "summary":
