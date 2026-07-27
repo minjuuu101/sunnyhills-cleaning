@@ -17,8 +17,8 @@
     "공용공간": "거실 · 세탁실 · 복도(현관) · 주방 바닥",
     "분리수거": "재활용 · 일반쓰레기 배출 · 쓰레기통 닦기 · 쓰레기통 비닐(라이너) 교체"
   },
-  "rotation_index": 2,
-  "last_run_iso_week": "2026-W30",
+  "rotation_index": 3,
+  "last_run_iso_week": "2026-W31",
   "vacancy": null,
   "carryover": null,
   "penalty_counters": {
@@ -44,28 +44,28 @@
     "grace_minutes": 10
   },
   "current_week": {
-    "iso_week": "2026-W30",
-    "week_range": "7/20 ~ 7/26",
+    "iso_week": "2026-W31",
+    "week_range": "7/27 ~ 8/2",
     "assignment": {
-      "주방": "은영",
-      "화장실": "은영(NEW)",
-      "공용공간": "승미",
-      "분리수거": "소현"
+      "주방": "은영(NEW)",
+      "화장실": "승미",
+      "공용공간": "소현",
+      "분리수거": "은영"
     },
     "status": {
-      "은영": "확인대기",
+      "은영(NEW)": "확인대기",
       "승미": "확인대기",
       "소현": "확인대기",
-      "은영(NEW)": "확인대기"
+      "은영": "확인대기"
     },
     "notes": []
   },
   "notice": {
     "status": "생성됨",
-    "iso_week": "2026-W30",
-    "generated_at": "2026-07-21T08:57:34",
+    "iso_week": "2026-W31",
+    "generated_at": "2026-07-27T11:01:45",
     "confirmed_at": null,
-    "unconfirmed_reminder_count": 0
+    "unconfirmed_reminder_count": 1
   },
   "rule_notice_shown": true
 }
