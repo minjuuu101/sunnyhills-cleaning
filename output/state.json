@@ -61,11 +61,11 @@
     "notes": []
   },
   "notice": {
-    "status": "생성됨",
+    "status": "발송완료",
     "iso_week": "2026-W31",
     "generated_at": "2026-07-27T11:01:45",
-    "confirmed_at": null,
-    "unconfirmed_reminder_count": 1
+    "confirmed_at": "2026-07-27T11:05:55",
+    "unconfirmed_reminder_count": 0
   },
   "rule_notice_shown": true
 }
